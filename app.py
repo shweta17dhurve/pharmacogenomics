@@ -8,10 +8,11 @@ app = Flask(__name__)
 
 
 def load_data():
-import os
+    import os
 
-file_path = os.path.join("data", "dataset.xlsx")
-df = pd.read_excel(file_path, engine="openpyxl")
+    file_path = os.path.join("data", "dataset.xlsx")
+    df = pd.read_excel(file_path, engine="openpyxl")
+    return df
 
 
 @app.route("/")
